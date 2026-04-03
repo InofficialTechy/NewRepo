@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriAI Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8zJbT9F7zjL+Gd2R5f3zYx04h6fM6kQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <section class="assistant-card" aria-label="NutriAI interface">
+      <header class="assistant-header">
+        <h1>NutriAI Assistant</h1>
+        <p>Your Nutrition &amp; Diet Companion</p>
+      </header>
+
+      <form class="input-row" id="queryForm" autocomplete="off">
+        <label class="visually-hidden" for="nutritionInput">Nutrition question</label>
+        <input
+          id="nutritionInput"
+          type="text"
+          placeholder="Ask anything about nutrition..."
+        />
+
+        <button type="button" class="icon-btn mic-btn" id="micToggle" aria-pressed="false" aria-label="Toggle listening mode">
+          <i class="fa-solid fa-microphone"></i>
+        </button>
+
+        <button type="submit" class="send-btn" aria-label="Send nutrition question">
+          Send
+        </button>
+      </form>
+
+      <p class="voice-state" id="voiceState" aria-live="polite">Tap mic to start listening</p>
+
+      <section class="suggestions" aria-label="Suggested nutrition questions">
+        <h2>Try asking:</h2>
+        <div class="chip-grid">
+          <button class="suggestion-chip" type="button">What foods are high in protein?</button>
+          <button class="suggestion-chip" type="button">Is peanut butter good for bulking?</button>
+          <button class="suggestion-chip" type="button">How much protein do I need daily?</button>
+          <button class="suggestion-chip" type="button">What are healthy snacks for weight loss?</button>
+          <button class="suggestion-chip" type="button">Is intermittent fasting good for fat loss?</button>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
