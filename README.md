@@ -30,6 +30,11 @@ A clean, modern, and responsive **frontend-only** prototype that mimics a nutrit
 
 That’s it — no build step and no dependencies required.
 
+## Theme
+
+- Default UI theme: **dark**
+- Colors are centralized in CSS custom properties at the top of `style.css` for easy theme iteration.
+
 ## Behavior Notes
 
 - Clicking any predefined nutrition question fills the input field.
